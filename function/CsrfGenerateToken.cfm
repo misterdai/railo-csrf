@@ -1,6 +1,6 @@
 <cffunction name="CsrfGenerateToken" output="false" returntype="string">
   <cfargument name="key" type="string" required="false" default="" />
-  <cfargument name="random" type="string" required="false" default="false" />
+  <cfargument name="random" type="boolean" required="false" default="false" />
   <cfscript>
     var lc = StructNew();
     lc.csrfKey = '_csrfTokens';
