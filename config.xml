@@ -1,0 +1,13 @@
+<config>
+	<info>
+		<id>E0353C9E-EA2F-451F-8AC87B61B41BE9C5</id>
+		<version>1.0.0</version>
+		<name>csrftokens</name>
+		<type>server</type>
+		<label>CSRF Session Tokens</label>
+		<description>Provides two functions that are used for CSRF protection.  One generates tokens (randomly or once), also accepting a key to support multiple tokens, then stores it in the session scope.  The other simply verifies against those tokens.</description>
+		<created>2012-May-30 12:12</created> 
+		<category>Core Extension</category> 
+	</info>
+	<step></step>
+</config>
