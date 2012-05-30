@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Railo-csrf by misterdai</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/misterdai/railo-csrf">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/misterdai/railo-csrf/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/misterdai/railo-csrf/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Railo-csrf</h1>
+          <p>Extension to provide CSRF functions.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/misterdai">misterdai</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>CSRF Extension</h1>
+
+<p><a href="http://www.getrailo.org/index.cfm/extensions/browse-extensions/csrf-session-tokens/">http://www.getrailo.org/index.cfm/extensions/browse-extensions/csrf-session-tokens/</a></p>
+
+<h2>Introduction</h2>
+
+<p>This extension provides two functions that help provide protection against CSRF attacks.  They work by generating a token that is associated with a URL or form, which is then verified when returned to the server.</p>
+
+<h2>CsrfGenerateToken()</h2>
+
+<p>Function to generate a CSRF token, automatically storing it within the session (Currently as a key/token combination under session._csrfTokens).</p>
+
+<h3>Arguments</h3>
+
+<ul>
+<li>key (string, optional, defaults "") - Used to uniquely identify a token.  This is useful if you have a requirement to use CSRF tokens in several places, as each can be provided a unique token without interfering with each other.</li>
+<li>random (boolean, optional, defaults false) - False will only generate a fresh token on the first request (against the "key" argument), subsequent requests for a token will return the same token (until the session expires).  True will generate a fresh token for the key provided, each time the function is called, overwriting the previously generated token.</li>
+</ul><h2>CsrfVerifyToken()</h2>
+
+<p>This provides the functionality to verify tokens that have previously been generated.</p>
+
+<h3>Arguments</h3>
+
+<ul>
+<li>token (string, required) - The token that you wish to verify.</li>
+<li>key (string, optional, defaults "") - Key which identifies the token you're trying to verify.  This must be the same as the one that you called CsrfGenerateToken with.</li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
