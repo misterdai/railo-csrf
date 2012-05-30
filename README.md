@@ -1,5 +1,7 @@
 # CSRF Extension
 
+http://www.getrailo.org/index.cfm/extensions/browse-extensions/csrf-session-tokens/
+
 ## Introduction
 
 This extension provides two functions that help provide protection against CSRF attacks.  They work by generating a token that is associated with a URL or form, which is then verified when returned to the server.
